@@ -14,7 +14,7 @@ QuizGPT is a web application that lets you upload a PDF and automatically genera
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/quizgpt.git
+git clone https://github.com/PabloSSena/QuizGPT
 cd quizgpt
 ```
 
