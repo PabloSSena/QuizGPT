@@ -15,12 +15,13 @@ QuizGPT is a web application that lets you upload a PDF and automatically genera
 
 ```bash
 git clone https://github.com/PabloSSena/QuizGPT
-cd quizgpt
+cd QuizGPT
 ```
 
 ### 2. Install Frontend Dependencies
 
 ```bash
+cd quizgpt
 npm install
 # or
 yarn install
@@ -30,6 +31,8 @@ yarn install
 
 ```bash
 cd quizgpt-back
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
