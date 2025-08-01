@@ -1,3 +1,4 @@
+"use client";
 import { create } from "zustand";
 
 const QUESTIONS_LOCAL_STORAGE_KEY = "questions";
@@ -8,9 +9,13 @@ interface IQuestionsStore {
 }
 
 const loadQuestionsFromLocalStorage = (): IQuestion[] | null => {
-  const questionsStringfied = localStorage.getItem(QUESTIONS_LOCAL_STORAGE_KEY);
-  if (questionsStringfied) {
-    return JSON.parse(questionsStringfied) as IQuestion[];
+  if (typeof window !== "undefined") {
+    const questionsStringfied = localStorage.getItem(
+      QUESTIONS_LOCAL_STORAGE_KEY
+    );
+    if (questionsStringfied) {
+      return JSON.parse(questionsStringfied) as IQuestion[];
+    }
   }
   return null;
 };
